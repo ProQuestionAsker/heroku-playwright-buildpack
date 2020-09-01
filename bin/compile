@@ -77,8 +77,8 @@ libxkbcommon0
 libepoxy0
 libatk-bridge2.0-0
 libvpx5
-libcairo-gobject2
 libgles2
+libcairo-gobject2
 EOF
 	fi
 
