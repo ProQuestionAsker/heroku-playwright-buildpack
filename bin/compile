@@ -113,6 +113,7 @@ configure_export_env() {
     mkdir -p $BUILD_DIR/.profile.d
     cat << EOF >$BUILD_DIR/.profile.d/001_playwright.sh
 export PLAYWRIGHT_BROWSERS_PATH=0
+export PATH=$PATH:/sbin
 EOF
 
     # Give environment variable to other buildpacks
