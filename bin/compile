@@ -76,6 +76,9 @@ libatk1.0-0
 libxkbcommon0
 libepoxy0
 libatk-bridge2.0-0
+libvpx5
+libcairo-gobject2
+libgles2
 EOF
 	fi
 
