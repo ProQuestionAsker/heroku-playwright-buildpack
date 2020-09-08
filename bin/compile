@@ -41,6 +41,7 @@ EOF
 
 	if [[ "$SUPPORTED_BROWSERS" == *"firefox"* ]]; then
 		cat << EOF >>$build_tmpdir/Aptfile
+ffmpeg
 libdbus-glib-1-2
 libxt6
 libsm6
