@@ -49,8 +49,8 @@ libice6
 gstreamer1.0-libav
 ubuntu-restricted-extras
 libgstreamer-gl1.0-0 
-    libgstreamer-plugins-bad1.0-0 
-    gstreamer1.0-plugins-good 
+libgstreamer-plugins-bad1.0-0 
+gstreamer1.0-plugins-good 
 EOF
 	fi
 
