@@ -89,6 +89,7 @@ EOF
 libnotify4
 libgdk-pixbuf2.0-0
 libcairo-gobject2
+ffmpeg
 EOF
 	fi
 
