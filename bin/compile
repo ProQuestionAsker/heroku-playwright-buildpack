@@ -46,6 +46,8 @@ libdbus-glib-1-2
 libxt6
 libsm6
 libice6
+gstreamer1.0-libav
+ubuntu-restricted-extras
 EOF
 	fi
 
