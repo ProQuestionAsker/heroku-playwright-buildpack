@@ -93,6 +93,9 @@ libnotify4
 libgdk-pixbuf2.0-0
 libcairo-gobject2
 ffmpeg
+ffmpeg-doc
+nvidia-vdpau-driver
+nvidia-legacy-340xx-vdpau-driver
 EOF
 	fi
 
