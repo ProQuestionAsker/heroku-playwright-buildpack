@@ -31,6 +31,7 @@ install_system_deps() {
 
 	if [[ "$SUPPORTED_BROWSERS" == *"chromium"* ]]; then
 		cat << EOF >>$build_tmpdir/Aptfile
+# Chromium dependencies
 libnss3
 libxss1
 libasound2
@@ -41,47 +42,12 @@ EOF
 
 	if [[ "$SUPPORTED_BROWSERS" == *"firefox"* ]]; then
 		cat << EOF >>$build_tmpdir/Aptfile
-
+# Firefox dependencies
 libdbus-glib-1-2
 libxt6
 libsm6
 libice6
-gstreamer1.0-libav
-EOF
-	fi
-
-	if [[ "$SUPPORTED_BROWSERS" == *"webkit"* ]]; then
-		cat << EOF >>$build_tmpdir/Aptfile
-libgstreamer1.0-0
-libgtk-3-0
-libbrotli1
-libgl1
-libegl1
-libnotify4
-libopus0
-libwoff1
-libharfbuzz-icu0
-libgstreamer-plugins-base1.0-0
-libgstreamer-gl1.0-0
-libgstreamer-plugins-bad1.0-0
-libopenjp2-7
-libwebpdemux2
-libenchant1c2a
-libsecret-1-0
-libhyphen0
-libxcomposite1
-libxdamage1
-libwayland-server0
-libwayland-egl1
-libwayland-client0
-libatk1.0-0
-libxkbcommon0
-libepoxy0
-libatk-bridge2.0-0
-libvpx5
-libgles2
-libglib2.0-0
-libcairo-gobject2
+ffmpeg
 EOF
 	fi
 
@@ -91,11 +57,6 @@ EOF
 libnotify4
 libgdk-pixbuf2.0-0
 libcairo-gobject2
-ffmpeg
-ffmpeg-doc
-nvidia-vdpau-driver
-nvidia-legacy-340xx-vdpau-driver
-chromium-codecs-ffmpeg-extra
 EOF
 	fi
 
@@ -124,7 +85,6 @@ configure_export_env() {
     mkdir -p $BUILD_DIR/.profile.d
     cat << EOF >$BUILD_DIR/.profile.d/001_playwright.sh
 export PLAYWRIGHT_BROWSERS_PATH=0
-export PATH=$PATH:/sbin
 EOF
 
     # Give environment variable to other buildpacks
