@@ -41,16 +41,12 @@ EOF
 
 	if [[ "$SUPPORTED_BROWSERS" == *"firefox"* ]]; then
 		cat << EOF >>$build_tmpdir/Aptfile
-ffmpeg
+
 libdbus-glib-1-2
 libxt6
 libsm6
 libice6
 gstreamer1.0-libav
-ubuntu-restricted-extras
-libgstreamer-gl1.0-0 
-libgstreamer-plugins-bad1.0-0 
-gstreamer1.0-plugins-good 
 EOF
 	fi
 
@@ -100,8 +96,6 @@ ffmpeg-doc
 nvidia-vdpau-driver
 nvidia-legacy-340xx-vdpau-driver
 chromium-codecs-ffmpeg-extra
-ubuntu-restricted-extras
-oxideqt-codecs-extra
 EOF
 	fi
 
